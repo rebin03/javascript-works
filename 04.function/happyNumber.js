@@ -16,13 +16,3 @@ function happyNumber(num){
 }
 
 console.log(happyNumber(13))
-
-
-
-
-
-
-
-
-// nextPrime(num)
-// isFibonacci(num)
