@@ -1,0 +1,63 @@
+Java Script
+-----------
+
+- How does java script used in both frontend and backend.
+  
+  * It is due JavaScript Engine
+
+- A JavaScript engine is a software component that executes JavaScript code. The first JavaScript engines were mere interpreters, but all relevant modern engines use just-in-time compilation for improved performance.
+
+
+Variables
+----------
+- named memory locations
+
+- 3 types of variable declaration which decides the scope of the variable: var, let, const
+	var: global scope, can change
+	let: block level scope, can change
+	const: constant values, cannot change	
+
+Operators
+----------
+
+- Arithmetic operators: ( +, -, /, *, %, ** )
+
+- Relational operators: ( <, >, >=, <=, ==, != )
+
+- Logical operators: ( &&, ||, ! )
+
+- Increment and Decrement operators: ++, --
+
+
+Type Coercion
+-------------
+
+Type coercion is the automatic or implicit conversion of values from one data type to another (such as strings to numbers)
+
+
+Ternary Operator
+----------------
+- It is a shortcut for writing simple if-else statements. 
+- Also known as the Conditional Operator because it works based on a condition.
+- The ternary operator allows you to quickly decide between two values depending on whether a condition is true or false.
+
+
+Syntax:
+condition ? trueExpression : falseExpression
+
+
+Hoisting
+---------
+- Hoisting is the behavior where the interpreter moves function and variable declarations to the top of their respective scope before executing the code.
+- This allows variables to be accessed before declaration, aiding in more flexible coding practices and avoiding “undefined” errors during execution.
+
+
+Arrow function
+--------------
+
+An arrow function is a shorter syntax for writing functions in JavaScript. Introduced in ES6, arrow functions allow for a more concise and readable code, especially in cases of small functions. Unlike regular functions, arrow functions don’t have their own this, but instead, inherit it from the surrounding context.
+
+- Arrow functions are written with the => symbol, which makes them compact.
+- They don’t have their own this. They inherit this from the surrounding context.
+- For functions with a single expression, the return is implicit, making the code more concise.
+- Arrow functions do not have access to the arguments object, which is available in regular functions.
