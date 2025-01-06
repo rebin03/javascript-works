@@ -3,8 +3,8 @@
 // push()
 // pop()
 // shift()
-// unshift()
-// include()
+// unshift() - 
+// include() - to check if the element is present in the array or not
 
 
 
