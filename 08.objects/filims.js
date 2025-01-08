@@ -89,15 +89,28 @@ var topRatedMovies = movies.filter(m => m.rating == topRatedMovie.rating);
 // console.log(topRatedMovies);
 
 // q4 movie with longest runtime
-
-
+var longestRuntimeMovie = movies.reduce((m1, m2) => m1.runtime > m2.runtime ? m1 : m2);
+console.log(longestRuntimeMovie);
 
 // q5 sort movies wrt year
+var sortedMoviesByYear = movies.slice().sort((a, b) => a.year - b.year);
+console.log(sortedMoviesByYear);
 
-// q5 year movie with name Angamaly Diaries
+// q6 year movie with name Angamaly Diaries
+var angamalyDiariesYear = movies.find(m => m.title === "Angamaly Diaries").year;
+console.log(angamalyDiariesYear);
 
-// q6 group movies wrt year {2017:2,2018:1,}
+// q7 group movies wrt year {2017:2,2018:1,}
+var moviesGroupedByYear = {}
+movies.forEach((m) => m.year in moviesGroupedByYear ? moviesGroupedByYear[m.year] += 1 : moviesGroupedByYear[m.year] = 1);
+console.log(moviesGroupedByYear);
 
-// q7 movies with genre Action or Crime
+// q8 movies with genre Action or Crime
+var actionOrCrimeMovies = movies.filter(m => m.genre.includes("Action") || m.genre.includes("Crime"));
+console.log(actionOrCrimeMovies);
 
-// q8 in which year most number of movies released
+// q9 in which year most number of movies released
+var mostMoviesYear = Object.keys(moviesGroupedByYear).reduce((a, b) => moviesGroupedByYear[a] > moviesGroupedByYear[b] ? a : b);
+// console.log(Object.keys(moviesGroupedByYear));
+// console.log(Object.values(moviesGroupedByYear));
+console.log(mostMoviesYear);
