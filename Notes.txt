@@ -61,3 +61,13 @@ An arrow function is a shorter syntax for writing functions in JavaScript. Intro
 - They don’t have their own this. They inherit this from the surrounding context.
 - For functions with a single expression, the return is implicit, making the code more concise.
 - Arrow functions do not have access to the arguments object, which is available in regular functions.
+
+
+Synchronous and Asynchronous
+----------------------------
+
+- js is single threaded. so it is actually Synchronous
+- But due to the runtime environment which consist of webapi, js behave as Asynchronous
+- runtime consist of jsEngine + webapi.
+- web api handle the Asynchronous behavior
+- (refer image in the root directory)
