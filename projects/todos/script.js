@@ -1,42 +1,14 @@
-var tasks=[
-    {
-        id:1,
-        user:"ram",
-        title:"task1",
-        completed:true
-    },
-    {
-        id:2,
-        user:"ram",
-        title:"task2",
-        completed:false
-    },
-    {
-        id:3,
-        user:"vipin",
-        title:"task3",
-        completed:true
-    },
-    {
-        id:4,
-        user:"vipin",
-        title:"task4",
-        completed:true
-    },
-    {
-        id:5,
-        user:"vijeesh",
-        title:"task6",
-        completed:true
-    },
-    {
-        id:6,
-        user:"vijeesh",
-        title:"task7",
-        completed:true
-    },
+// Getting todos data using url
+// fetch("https://jsonplaceholder.typicode.com/todos").then(res => res.json()).then(data => displayTodos(data))
 
-]
+fetchAllTodos()
+
+async function fetchAllTodos() {
+    let response = await fetch("https://jsonplaceholder.typicode.com/todos")
+    let data = await response.json()
+
+    displayTodos(data)
+}
 
 
 function displayTodos(tasks){
@@ -49,7 +21,7 @@ function displayTodos(tasks){
                 <ul class="list-group list-group-flush">
                     <li class="list-group-item">id: ${t.id}</li>
                     <li class="list-group-item">title: ${t.title}</li>
-                    <li class="list-group-item">user: ${t.user}</li>
+                    <li class="list-group-item">user: ${t.userId}</li>
                     <li class="list-group-item">status: ${t.completed}</li>
                 </ul>
             </div>
